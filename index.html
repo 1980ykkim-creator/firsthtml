@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>덕산테코피아 | DS Techopia</title>
+  <meta name="description" content="덕산테코피아(DS Techopia) — 학교 과제용 기업형 단일 페이지 데모">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-row">
+      <a class="brand" href="#top" aria-label="덕산테코피아 홈">
+        <img src="assets/logo.png" alt="덕산테코피아 로고" class="logo">
+      </a>
+      <nav class="nav">
+        <a href="#about">회사소개</a>
+        <a href="#business">사업분야</a>
+        <a href="#products">제품소개</a>
+        <a href="#contact">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">SCHOOL ASSIGNMENT DEMO</p>
+        <h1>첨단 소재로 만들어가는 <span class="accent">깨끗한 미래</span></h1>
+        <p class="lead">반도체·디스플레이·배터리 산업을 위한 고기능성 소재와 공정 솔루션을 제공합니다.</p>
+        <div class="cta-row">
+          <a href="#products" class="btn">제품 보기</a>
+          <a href="#contact" class="btn btn-ghost">문의하기</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About (enhanced) -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2>회사소개</h2>
+        <div class="about-grid">
+          <article class="card about-card fade">
+            <h3>슬로건</h3>
+            <p class="slogan">“Materials for a Better Tomorrow”</p>
+            <ul class="chips">
+              <li>혁신</li><li>신뢰</li><li>품질</li>
+            </ul>
+          </article>
+
+          <article class="card about-card fade">
+            <h3>CEO 인사말</h3>
+            <p>덕산테코피아는 고객과 함께 성장하는 파트너가 되겠습니다. 고순도 전자재료와 특수화학소재 역량을 바탕으로 더 높은 품질과 효율을 약속드립니다.</p>
+            <p class="sign">대표이사 드림</p>
+          </article>
+
+          <article class="card about-card fade">
+            <h3>핵심 역량</h3>
+            <ul class="bullets compact">
+              <li>고순도 합성/정제 공정</li>
+              <li>SPC 기반 품질 관리</li>
+              <li>고객 맞춤형 포뮬레이션</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business fields -->
+    <section id="business" class="section alt">
+      <div class="container">
+        <h2>사업분야</h2>
+        <div class="cards business-cards">
+          <article class="card business">
+            <img src="assets/biz-semicon.svg" alt="" class="biz-icon">
+            <h3>전자소재</h3>
+            <p>반도체 공정용 고순도 소재로 수율과 신뢰성을 향상합니다.</p>
+          </article>
+          <article class="card business">
+            <img src="assets/biz-display.svg" alt="" class="biz-icon">
+            <h3>디스플레이</h3>
+            <p>디스플레이 제조 공정에 최적화된 정밀 화학소재를 제공합니다.</p>
+          </article>
+          <article class="card business">
+            <img src="assets/biz-battery.svg" alt="" class="biz-icon">
+            <h3>배터리소재</h3>
+            <p>차세대 에너지 산업을 위한 고기능성 소재 솔루션을 개발합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products with modal -->
+    <section id="products" class="section">
+      <div class="container">
+        <h2>제품소개</h2>
+        <p class="sub">각 제품 카드를 클릭하면 자세한 설명 팝업이 나타납니다.</p>
+        <div class="cards">
+          <article class="card product clickable" data-modal="modal-electronic">
+            <img src="assets/prod-electronic.svg" alt="전자재료" class="prod-img">
+            <div class="prod-body">
+              <h3>전자재료</h3>
+              <p>공정 안정성과 생산성을 높이는 고순도 전자재료</p>
+              <button class="linklike" data-modal="modal-electronic">자세히 보기 →</button>
+            </div>
+          </article>
+
+          <article class="card product clickable" data-modal="modal-specialty">
+            <img src="assets/prod-specialty.svg" alt="특수화학소재" class="prod-img">
+            <div class="prod-body">
+              <h3>특수화학소재</h3>
+              <p>내열/내약품성, 접착/코팅 특성의 고기능성 수지</p>
+              <button class="linklike" data-modal="modal-specialty">자세히 보기 →</button>
+            </div>
+          </article>
+
+          <article class="card product clickable" data-modal="modal-eco">
+            <img src="assets/prod-eco.svg" alt="친환경소재" class="prod-img">
+            <div class="prod-body">
+              <h3>친환경소재</h3>
+              <p>환경 영향을 줄이는 지속가능 소재</p>
+              <button class="linklike" data-modal="modal-eco">자세히 보기 →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modals -->
+    <div class="modal" id="modal-electronic" aria-hidden="true" role="dialog" aria-labelledby="modal-electronic-title">
+      <div class="modal-dialog">
+        <h3 id="modal-electronic-title">전자재료</h3>
+        <p>저금속 불순물, 고순도 등급으로 공정 호환성이 검증된 전자재료 라인업을 제공합니다.</p>
+        <ul class="bullets compact">
+          <li>공정 안정성 향상</li>
+          <li>대량 양산 대응</li>
+          <li>정밀 분석 리포트 제공</li>
+        </ul>
+        <button class="btn btn-ghost close-modal">닫기</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-specialty" aria-hidden="true" role="dialog" aria-labelledby="modal-specialty-title">
+      <div class="modal-dialog">
+        <h3 id="modal-specialty-title">특수화학소재</h3>
+        <p>맞춤형 포뮬레이션으로 내구성과 신뢰성을 만족하는 소재 설계를 지원합니다.</p>
+        <ul class="bullets compact">
+          <li>고내열/내약품성</li>
+          <li>접착/코팅 최적화</li>
+          <li>공정 컨설팅</li>
+        </ul>
+        <button class="btn btn-ghost close-modal">닫기</button>
+      </div>
+    </div>
+
+    <div class="modal" id="modal-eco" aria-hidden="true" role="dialog" aria-labelledby="modal-eco-title">
+      <div class="modal-dialog">
+        <h3 id="modal-eco-title">친환경소재</h3>
+        <p>저VOC, 재활용성 고려 등 환경 규제에 대응 가능한 소재를 개발합니다.</p>
+        <ul class="bullets compact">
+          <li>저탄소 지향</li>
+          <li>친환경 공정 호환</li>
+          <li>규제 대응 지원</li>
+        </ul>
+        <button class="btn btn-ghost close-modal">닫기</button>
+      </div>
+    </div>
+
+    <!-- Contact (with real info from v7) -->
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>문의하기</h2>
+        <div class="contact-grid">
+          <form id="contactForm" class="card form" novalidate>
+            <label>이름<input type="text" id="name" required placeholder="홍길동"></label>
+            <label>이메일<input type="email" id="email" required placeholder="you@example.com"></label>
+            <label>메시지<textarea id="message" rows="4" required placeholder="문의 내용을 작성해 주세요."></textarea></label>
+            <div class="form-actions">
+              <button type="submit" class="btn">보내기</button>
+              <p id="msg" class="form-msg" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+          <div class="card contact-card">
+            <h3>연락처</h3>
+            <ul class="contact-list">
+              <li><strong>주소</strong> 31245 충남 천안시 동남구 성남면 5산단 3로 30</li>
+              <li><strong>전화</strong> 041-564-5660</li>
+              <li><strong>이메일</strong> <a href="mailto:ykkim@dstp.co.kr">ykkim@dstp.co.kr</a></li>
+            </ul>
+            <p class="mini">* 본 페이지는 학교 과제 데모용입니다.</p>
+            <div class="map-embed">
+              <img src="assets/map-placeholder.svg" alt="지도 위치 표시(예시)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <small>© <span id="year"></span> DS Techopia • All rights reserved</small>
+      <div class="sns">
+        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        <a href="#" aria-label="YouTube">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
